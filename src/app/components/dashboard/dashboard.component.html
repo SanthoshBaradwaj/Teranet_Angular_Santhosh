@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="col-sm-10 m-auto" *ngIf="!userLoginObj">
+    <h2>
+      <fa name="star" animation="spin"></fa> <u> Welcome To Teranet ISP </u>
+    </h2>
+    <h5>Please log-in to view the user details</h5>
+  </div>
+
+
+  <div class="col-sm-9 m-auto" *ngIf="userLoginObj">
+    <div></div>
+    <h3 class="mb-5 mt-5">
+      <fa name="vcard"></fa>
+      User Details
+    </h3>
+
+    <!-- <div class="card" (mouseover)="cf.hidden=false" (mouseleave)="cf.hidden=true"> -->
+    <div class="card">
+      <div class="card-header">
+        <h4 class="float-left"> Welcome {{userObj.userName}}</h4>
+      </div>
+      <div class="card-body">
+        <div class="row">
+
+          <div class="col-md-9">
+
+            <h5>
+              <fa name="envelope"></fa> <span class="px-3"> {{userObj.emailId}} </span>
+            </h5>
+            <h5>
+              <fa name="phone"></fa> <span class="px-3"> {{userObj.mobileNumber}}</span>
+            </h5>
+            <div *ngIf="userObj.userName == 'Administrator'">
+              <a routerLink="">Admin Operations</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="card-footer">
+      <div class="btn-group btn-primary">
+        <a (click)="doDelete()" class="btn">
+          <fa name="sign-out"></fa> Sign Out
+        </a>
+      </div>
+    </div>
+    </ div>
+  </div>

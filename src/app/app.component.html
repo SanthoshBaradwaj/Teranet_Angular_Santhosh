@@ -1,0 +1,16 @@
+<body>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <a class="navbar-brand" routerLink="/">
+    <img [src]=logoUrl style="width:50px" /> {{title}}
+  </a>
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/login">
+        <fa name="users"></fa>
+        Login Form
+      </a>
+    </li>
+  </ul>
+</nav>
+<router-outlet></router-outlet>
+</body>
